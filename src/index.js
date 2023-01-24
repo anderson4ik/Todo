@@ -6,11 +6,18 @@ import AppHeader from "./components/app-header";
 import SearchPanel from "./components/search-panel";
 
 const App = () => {
+
+    const todoData = [
+        { label: 'Drink Coffee', important: false },
+        { label: 'Drink Tea', important: false },
+        { label: 'Build REACT APP', important: true },
+    ]
+
     return (
         <div>
             <AppHeader />
             <SearchPanel />
-            <TodoList />
+            <TodoList todos={todoData} />
         </div>
     );
 }
